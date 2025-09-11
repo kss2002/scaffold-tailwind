@@ -7,16 +7,16 @@ class PostsTest < ApplicationSystemTestCase
 
   test "visiting the index" do
     visit posts_url
-    assert_selector "h1", text: "Posts"
+    assert_selector "h1", text: "게시글"
   end
 
   test "should create post" do
     visit posts_url
-    click_on "New post"
+    click_on "새 게시글"
 
     fill_in "Content", with: @post.content
     fill_in "Title", with: @post.title
-    click_on "Create Post"
+    click_on "새 게시글"
 
     assert_text "Post was successfully created"
     click_on "Back"
@@ -28,7 +28,7 @@ class PostsTest < ApplicationSystemTestCase
 
     fill_in "Content", with: @post.content
     fill_in "Title", with: @post.title
-    click_on "Update Post"
+    click_on "포스트 업데이트"
 
     assert_text "Post was successfully updated"
     click_on "Back"
@@ -36,7 +36,7 @@ class PostsTest < ApplicationSystemTestCase
 
   test "should destroy Post" do
     visit post_url(@post)
-    accept_confirm { click_on "Destroy this post", match: :first }
+    accept_confirm { click_on "포스트 삭제", match: :first }
 
     assert_text "Post was successfully destroyed"
   end
