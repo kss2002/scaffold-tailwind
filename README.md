@@ -31,3 +31,9 @@ or
 
 ./bin/dev
 ```
+
+## bundle 업데이트
+
+```bash
+bundle install
+```
