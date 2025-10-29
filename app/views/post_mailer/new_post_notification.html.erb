@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  </head>
+  <body>
+    <h1>새로운 글이 등록되었습니다: <%= @post.title %></h1>
+    <p>
+      안녕하세요, <%= @subscriber.email %>님!
+    </p>
+    <p>
+      블로그에 새로운 글이 등록되었습니다. 아래 링크를 통해 확인해보세요.
+    </p>
+    <hr>
+    <h2><%= @post.title %></h2>
+    <p>
+      <%= simple_format(@post.body) %>
+    </p>
+    <hr>
+    <p>
+      <%= link_to "블로그에서 글 확인하기", post_url(@post) %>
+    </p>
+    <p>
+      감사합니다.
+    </p>
+  </body>
+</html>
